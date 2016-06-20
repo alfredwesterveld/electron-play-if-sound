@@ -24,7 +24,8 @@ class DummySoundplayer implements SoundplayerInterface {
     }
 }
 
-export default class Soundplayer implements SoundplayerInterface {
+// TODO: Have a look how to write this new style but HMR works :)
+module.exports = class Soundplayer implements SoundplayerInterface {
     player: SoundplayerInterface;
 
     constructor(file: string) {
