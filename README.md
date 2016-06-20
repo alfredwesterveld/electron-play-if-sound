@@ -1,2 +1,2 @@
-# electron-play-if-sound
-Only play sound if available
+# electron-is-headless
+test if electron is running headless

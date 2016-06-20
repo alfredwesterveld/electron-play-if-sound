@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+    <title>Play if sound</title>
+</head>
+<body>
+<html>
+<h1>Play if sound</h1>
+<script>
+    // TODO: This is boilerplate...
+    var bundlePath = './dist/bundle.js';
+
+    if (typeof process !== 'undefined' && process.env.ENVIRONMENT === 'DEV') {
+        console.log('ghghg')
+        bundlePath = 'http://localhost:8080/dist/bundle.js';
+    }
+
+    var bundleScriptEl = document.createElement('script');
+    bundleScriptEl.src = bundlePath;
+    document.body.appendChild(bundleScriptEl);
+</script>
+</body>
+</html>
+<!--<script src="http://localhost:8080/dist/bundle.js"></script>-->
