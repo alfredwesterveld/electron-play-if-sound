@@ -1,6 +1,12 @@
-const isHeadless = require("electron-is-headless");
+const isHeadless = require('electron-is-headless');
 
+/**
+ * Interface for playing sound
+ */
 interface SoundplayerInterface {
+    /**
+     * plays sound for real if available. Else it will be noop
+     */
     play() : void;
 }
 
@@ -11,21 +17,24 @@ class RealSoundplayer implements SoundplayerInterface {
         this.file = file;
     }
 
+    /**
+     * Play for real.
+     */
     play():void {
         new Audio(this.file).play();
     }
 }
 
 class DummySoundplayer implements SoundplayerInterface {
-    // Noop
-
+    /**
+     * Don't play sound because unavailable.
+     */
     play():void {
 
     }
 }
 
-// TODO: Have a look how to write this new style but HMR works :)
-module.exports = class Soundplayer implements SoundplayerInterface {
+export default class Soundplayer implements SoundplayerInterface {
     player: SoundplayerInterface;
 
     constructor(file: string) {
@@ -33,7 +42,7 @@ module.exports = class Soundplayer implements SoundplayerInterface {
     }
 
     /**
-     * oooppps
+     * Play sound if available.
      */
     play():void {
         this.player.play();

@@ -2,7 +2,7 @@
 
 'use strict';
 
-const Soundplayer = require('./src/Soundplayer.ts'); // TODO: Should point to static type.
+import Soundplayer from './src/Soundplayer.ts';
 const soundplayer = new Soundplayer('./static/0.wav');
-soundplayer.play('dfd');
-console.log('1');
+
+soundplayer.play();
