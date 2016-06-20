@@ -1,15 +1,8 @@
 {
-<<<<<<< HEAD
   "name": "electron-play-if-sound",
   "version": "0.0.1",
   "description": "play sound if not headless",
   "main": "index.js",
-=======
-  "name": "electron-is-headless",
-  "version": "0.0.2",
-  "description": "test if electron is headless",
-  "main": "entry.js",
->>>>>>> 134fda3e6ee9079ad279b12c17eb4ff45f389db8
   "scripts": {
     "build": "(webpack) || true",
     "build-run": "(webpack && electron index.js) || true",
