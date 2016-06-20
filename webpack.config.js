@@ -1,7 +1,6 @@
 const path = require("path" )
 
 module.exports = {
-    //entry: path.join(__dirname, "entry.ts"),
     entry: "./entry.ts",
     target: "electron",
     output: {
