@@ -1,14 +1,12 @@
 const path = require("path" )
 
 module.exports = {
-    entry: "./entry.ts",
+    entry: "./module.ts",
     target: "electron",
     output: {
+        filename: 'index.js',
         library: true,
-        libraryTarget: 'commonjs2',
-        path: __dirname + "/dist",
-        filename: "bundle.js",
-        publicPath: 'http://localhost:8080/dist/'
+        libraryTarget: 'commonjs2'
     },
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",

@@ -4,11 +4,11 @@
   "description": "play sound if not headless",
   "main": "index.js",
   "scripts": {
-    "build": "(webpack) || true",
+    "build": "(webpack --config webpack.library.js) || true",
     "build-run": "(webpack && electron index.js) || true",
     "run": "xvfb-maybe electron index.js --enable-logging",
     "watch": "webpack-dev-server --inline --hot",
-    "start": "ENVIRONMENT=DEV electron index.js",
+    "start": "ENVIRONMENT=DEV electron electron.es6",
     "declaration": "tsc --declaration",
     "test": "jest"
   },

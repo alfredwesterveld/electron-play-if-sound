@@ -2,5 +2,6 @@
 
 'use strict';
 
-import Soundplayer from './src/Soundplayer.ts';
-export default Soundplayer;
+import Soundplayer from './module';
+const soundplayer = new Soundplayer('./static/0.wav');
+soundplayer.play();
