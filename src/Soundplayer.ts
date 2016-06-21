@@ -1,14 +1,7 @@
-const isHeadless = require('electron-is-headless');
+'use strict';
 
-/**
- * Interface for playing sound
- */
-interface SoundplayerInterface {
-    /**
-     * plays sound for real if available. Else it will be noop
-     */
-    play() : void;
-}
+const isHeadless = require('electron-is-headless');
+import {SoundplayerInterface} from './SoundplayerInterface';
 
 class RealSoundplayer implements SoundplayerInterface {
     file: string;

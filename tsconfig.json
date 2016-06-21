@@ -8,7 +8,8 @@
   "files": [
     "./typings/index.d.ts",
     "./entry.ts",
-    "./src/Soundplayer.ts"
+    "./src/Soundplayer.ts",
+    "./src/SoundplayerInterface.ts"
   ],
   "exclude": [
     "node_modules"

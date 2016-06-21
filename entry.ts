@@ -3,6 +3,12 @@
 'use strict';
 
 import Soundplayer from './src/Soundplayer.ts';
-const soundplayer = new Soundplayer('./static/0.wav');
 
-soundplayer.play();
+const runningAsScript = !module.parent;
+
+if (runningAsScript) {
+    export default Soundplayer;
+} else {
+    const soundplayer = new Soundplayer('./static/0.wav');
+    soundplayer.play();
+}

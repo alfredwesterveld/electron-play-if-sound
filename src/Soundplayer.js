@@ -1,15 +1,20 @@
-"use strict";
-const isHeadless = require("electron-is-headless");
+'use strict';
+const isHeadless = require('electron-is-headless');
 class RealSoundplayer {
     constructor(file) {
         this.file = file;
     }
+    /**
+     * Play for real.
+     */
     play() {
         new Audio(this.file).play();
     }
 }
 class DummySoundplayer {
-    // Noop
+    /**
+     * Don't play sound because unavailable.
+     */
     play() {
     }
 }
@@ -18,7 +23,7 @@ class Soundplayer {
         this.player = isHeadless() ? new DummySoundplayer() : new RealSoundplayer(file);
     }
     /**
-     * oooppps
+     * Play sound if available.
      */
     play() {
         this.player.play();
